@@ -1,3 +1,3 @@
 # Fabtastic Painting
 
-[Trello Board](https://trello.com/b/tOHtYDkB)
+[Agile Sprint Board](https://github.com/dscott1008/fabtastic-painting/projects/1)
