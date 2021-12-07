@@ -22,24 +22,24 @@ const ContactBar: React.FC = () => {
                     <div className="flex items-center space-x-12">
                         <div className="flex space-x-5 my-2">
                             <div className="flex items-center">
-                                <Link to="https://www.facebook.com/FabtasticPainting/" target="_blank">
+                                <a href="https://www.facebook.com/FabtasticPainting/" target="_blank">
                                     <FaFacebookF className="text-white hover:text-primary transition duration-200" />
-                                </Link>
+                                </a>
                             </div>
                             <div className="flex items-center">
-                                <Link to="https://www.instagram.com/fabtastic_paintingcr/" target="_blank">
+                                <a href="https://www.instagram.com/fabtastic_paintingcr/" target="_blank">
                                     <FaInstagram className="text-white hover:text-primary transition duration-200" />
-                                </Link>
+                                </a>
                             </div>
                             <div className="flex items-center">
-                                <Link to="https://wa.me/13192024769" target="_blank">
+                                <a href="https://wa.me/13192024769" target="_blank">
                                     <FaWhatsapp className="text-white hover:text-primary transition duration-200" />
-                                </Link>
+                                </a>
                             </div>
                             <div className="flex items-center">
-                                <Link to="https://m.me/fabtasticpainting" target="_blank">
+                                <a href="https://m.me/fabtasticpainting" target="_blank">
                                     <FaFacebookMessenger className="text-white hover:text-primary transition duration-200" />
-                                </Link>
+                                </a>
                             </div>
                         </div>
                         <div className="flex items-center my-2 text-white hover:text-primary transition duration-200">
