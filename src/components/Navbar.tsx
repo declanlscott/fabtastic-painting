@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { Link } from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
+
 import MobileMenu from "./MobileMenu"
 
 interface NavbarProps {
@@ -29,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ siteTitle }) => {
     })
 
     return (
-        <nav className="bg-black">
+        <nav className="bg-black sticky top-0 z-50">
             <div className="max-w-7xl mx-auto md:px-8 sm:px-4 px-2">
                 <div className="flex justify-between">
                     <div className="flex space-x-7">
@@ -63,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ siteTitle }) => {
                     </div>
                 </div>
             </div>
-            <MobileMenu isOpen={isOpen} toggle={toggle}/>
+            <MobileMenu isOpen={isOpen} toggle={toggle} />
         </nav>
     )
 }

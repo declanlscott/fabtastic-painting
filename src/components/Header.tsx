@@ -1,4 +1,6 @@
 import React from "react"
+
+import ContactBar from "./ContactBar"
 import Navbar from './Navbar'
 
 interface HeaderProps {
@@ -8,7 +10,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   return (
     <header>
-      <Navbar siteTitle={siteTitle}/>
+      <ContactBar />
+      <Navbar siteTitle={siteTitle} />
     </header>
   )
 }
