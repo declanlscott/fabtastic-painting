@@ -2,6 +2,10 @@ import React, {useState, useEffect} from "react"
 import { Link } from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
 
+import { Transition } from "@headlessui/react"
+
+import { HiMenu, HiX } from 'react-icons/hi'
+
 import MobileMenu from "./MobileMenu"
 
 interface NavbarProps {
@@ -30,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ siteTitle }) => {
     })
 
     return (
-        <nav className="bg-black sticky top-0 z-50">
+        <nav className="bg-black lg:sticky lg:top-0 lg:z-10">
             <div className="max-w-7xl mx-auto md:px-8 sm:px-4 px-2">
                 <div className="flex justify-between">
                     <div className="flex space-x-7">
@@ -45,26 +49,29 @@ const Navbar: React.FC<NavbarProps> = ({ siteTitle }) => {
                             />
                         </Link>
                     </div>
-                    <div className="hidden lg:flex items-center space-x-11 text-lg font-bold">
-                        <Link to="/" className="nav-link" activeClassName="text-primary">HOME</Link>
-                        <Link to="/about-us" className="nav-link" activeClassName="text-primary">ABOUT US</Link>
-                        <Link to="/services" className="nav-link" activeClassName="text-primary">SERVICES</Link>
-                        <Link to="/gallery" className="nav-link" activeClassName="text-primary">GALLERY</Link>
-                        <Link to="/contact-us" className="nav-button">FREE ESTIMATE</Link>
+                    <div className="hidden lg:flex items-center space-x-11 text-lg font-bold text-white">
+                        <Link to="/" className="px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">HOME</Link>
+                        <Link to="/about-us" className="px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">ABOUT US</Link>
+                        <Link to="/services" className="px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">SERVICES</Link>
+                        <Link to="/gallery" className="px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">GALLERY</Link>
+                        <Link to="/contact-us" className="px-4 py-2 bg-tertiary rounded-full hover:bg-tertiary-dark transition duration-200">FREE ESTIMATE</Link>
                     </div>
                     <div className="lg:hidden flex items-center px-4 cursor-pointer" onClick={toggle}>
-                        {isOpen
-                            ? <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 stroke-current text-primary" fill="none" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            : <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 stroke-current text-primary" fill="none" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
+                        {!isOpen
+                            ? <HiMenu className="h-8 w-8 text-primary" />
+                            : <HiX className="h-8 w-8 text-primary" />
                         }
                     </div>
                 </div>
             </div>
-            <MobileMenu isOpen={isOpen} toggle={toggle} />
+            <Transition
+                show={isOpen}
+                enter="transition duration-200 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+            >
+                <MobileMenu isOpen={isOpen} toggle={toggle} />
+            </Transition>
         </nav>
     )
 }

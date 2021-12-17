@@ -4,10 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-link {
-  @apply px-2 py-4 text-white hover:text-primary transition duration-200
+#swiper-color .swiper-button-next {
+    color: #E6C279
 }
 
-.nav-button {
-  @apply px-4 py-2 text-white bg-tertiary rounded-3xl hover:bg-tertiary-darken transition duration-200
+#swiper-color .swiper-button-prev {
+    color: #E6C279
+}
+
+#swiper-color .swiper-pagination-bullet-active {
+    background-color: #E6C279
 }

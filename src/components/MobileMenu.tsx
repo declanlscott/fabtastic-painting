@@ -8,12 +8,12 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, toggle }) => {
     return (
-        <div className={isOpen ? "text-center items-center bg-secondary text-lg font-bold" : "hidden"} onClick={toggle}>
-            <Link to="/" className="block nav-link" activeClassName="text-primary">HOME</Link>
-            <Link to="/about-us" className="block nav-link" activeClassName="text-primary">ABOUT US</Link>
-            <Link to="/services" className="block nav-link" activeClassName="text-primary">SERVICES</Link>
-            <Link to="/gallery" className="block nav-link" activeClassName="text-primary">GALLERY</Link>
-            <Link to="/contact-us" className="block nav-link" activeClassName="text-primary">FREE ESTIMATE</Link>
+        <div className={isOpen ? "text-center items-center bg-secondary text-lg font-bold text-white" : "hidden"} onClick={toggle}>
+            <Link to="/" className="block px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">HOME</Link>
+            <Link to="/about-us" className="block px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">ABOUT US</Link>
+            <Link to="/services" className="block px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">SERVICES</Link>
+            <Link to="/gallery" className="block px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">GALLERY</Link>
+            <Link to="/contact-us" className="block px-2 py-4 hover:text-primary transition duration-200" activeClassName="text-primary">FREE ESTIMATE</Link>
         </div>
     )
 }

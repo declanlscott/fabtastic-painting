@@ -9,10 +9,10 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   return (
-    <header>
+    <>
       <ContactBar />
       <Navbar siteTitle={siteTitle} />
-    </header>
+    </>
   )
 }
 

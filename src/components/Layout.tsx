@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import '../styles/global.css';
 
 import Header from "./Header"
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: ReactNode
@@ -25,6 +26,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header siteTitle={siteTitle} />
+      <div className="content">
+        { children }
+      </div>
+      <Footer />
     </>
   )
 }

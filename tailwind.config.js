@@ -4,13 +4,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#E6C279',
+        primary: {
+          DEFAULT: '#E6C279',
+          light: '#e9cb8d'
+        },
         'secondary': '#403520',
-        'tertiary': '#8A7345',
-        'tertiary-darken': '#75613a',
+        tertiary: {
+          DEFAULT: '#8A7345',
+          dark: '#75613a'
+        }
       },
       fontFamily: {
         sans: ['"Poppins"', 'sans-serif']
+      },
+      zIndex: {
+        'neg': -1
       }
     },
   },
