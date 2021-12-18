@@ -1,23 +1,43 @@
 import React from 'react'
 
-import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
+import BackgroundImage from 'gatsby-background-image'
+import { convertToBgImage } from 'gbimage-bridge'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import { FaPaintRoller } from 'react-icons/fa'
 
 import FadeIn from './FadeIn'
 
 const HeroPage: React.FC = () => {
+    const { placeholderImage } = useStaticQuery(
+        graphql`
+            query {
+                placeholderImage: file(relativePath: {eq: "hero.webp"}) {
+                    childImageSharp {
+                        gatsbyImageData(
+                            formats: [AUTO, WEBP, AVIF],
+                            placeholder: NONE,
+                            transformOptions: {cropFocus: CENTER, fit: COVER}
+                        )
+                    }
+                }
+            }
+        `
+    )
+
+    const heroImage = getImage(placeholderImage);
+
+    const heroBgImage = convertToBgImage(heroImage);
+
     return (
-        <div className="grid">
-            <StaticImage
-                className="row-start-1 col-start-1 h-full lg:h-screen"
-                src="../images/hero.webp"
-                alt=""
-                placeholder="none"
-            />
-            <div className="row-start-1 col-start-1 relative grid bg-black bg-opacity-50">
-                <div className="flex-col md:px-8 px-4 md:my-20 my-10">
+        <div className="inline-block w-full bg-black bg-opacity-50">
+            <BackgroundImage
+                {...heroBgImage}
+                preserveStackingContext
+                className="min-h-screen"
+            >
+                <div className="flex-col md:px-8 px-4 md:py-20 py-10">
                     <FadeIn>
                         <h1 className="flex justify-center text-center lg:text-6xl md:text-5xl text-4xl font-bold text-white">RESIDENTIAL &amp; COMMERCIAL</h1>
                     </FadeIn>
@@ -44,9 +64,8 @@ const HeroPage: React.FC = () => {
                             </div>
                         </div>
                     </FadeIn>
-                    
                 </div>
-            </div>
+            </BackgroundImage>
         </div>
     )
 }
