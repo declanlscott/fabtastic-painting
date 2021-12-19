@@ -40,9 +40,11 @@ const ContactUsForm = () => {
             method="post"
             data-netlify="true"
             data-netlify-honeypont="bot-field"
+            data-netlify-recaptcha="true"
             className="w-full max-w-3xl"
         >
             <input type="hidden" name="form-name" value="contact-us" />
+            <input type="hidden" name="bot-field" />
             <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full md:w-2/5 px-3 mb-6 md:mb-0">
                     <label className="block tracking-wide text-secondary text-xs font-bold mb-2" htmlFor="name">
@@ -99,6 +101,7 @@ const ContactUsForm = () => {
                     />
                 </div>
             </div>
+            <div data-netlify-recaptcha="true" />
             <div className="flex justify-center">
                 <button type="submit" className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200">SUBMIT</button>
             </div>
