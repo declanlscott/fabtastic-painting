@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactUsForm = () => {
     const [formState, setFormState] = useState({
@@ -7,6 +8,8 @@ const ContactUsForm = () => {
         phoneNumber: "",
         message: ""
     });
+
+    const [disableSubmit, setDisableSubmit] = useState(true);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormState({
@@ -78,9 +81,20 @@ const ContactUsForm = () => {
                     />
                 </div>
             </div>
-            <div className="g-recaptcha flex justify-center mb-8" data-sitekey="6Lctq7IdAAAAAMRSlFwuXIZPsTa0TGB3e09knGWe" />
+            <div className="flex justify-center mb-8">
+                <ReCAPTCHA
+                    sitekey='6Lctq7IdAAAAAMRSlFwuXIZPsTa0TGB3e09knGWe'
+                    onChange={useCallback(() => {setDisableSubmit(false)},[])}
+                />
+            </div>
             <div className="flex justify-center">
-                <button type="submit" className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200">SUBMIT</button>
+                <button
+                    type="submit"
+                    disabled={disableSubmit}
+                    className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200 disabled:opacity-50"
+                >
+                    SUBMIT
+                </button>
             </div>
         </form>
     )

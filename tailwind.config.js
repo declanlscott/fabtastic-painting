@@ -19,11 +19,13 @@ module.exports = {
       },
       zIndex: {
         'neg': -1
-      }
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+    },
   },
   plugins: [],
 }

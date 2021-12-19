@@ -64,7 +64,7 @@ function Seo({ pageTitle, meta=[] }: SEOProps) {
                 },
               ].concat(meta)}
         >
-          <script src="https://www.google.com/recaptcha/api.js" />
+          {/* <script src="https://www.google.com/recaptcha/api.js" /> */}
         </Helmet>
     )
 }
