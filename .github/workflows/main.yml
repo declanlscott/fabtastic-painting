@@ -37,7 +37,7 @@ jobs:
           yarn install --production
           yarn build
           
-      - name: Depoly to Netlify
+      - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.2
         with:
           publish-dir: './public'
