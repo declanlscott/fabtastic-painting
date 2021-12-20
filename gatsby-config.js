@@ -35,8 +35,16 @@ module.exports = {
         icon: `src/images/fp-icon.png`
       },
     },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      option: {
+        rule: {
+          include: `src/images/svg`
+        }
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-graphql-codegen`
+    `gatsby-plugin-graphql-codegen`,
   ],
 }
