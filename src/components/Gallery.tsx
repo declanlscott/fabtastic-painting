@@ -46,13 +46,13 @@ const Gallery = () => {
                 <div className="flex-col text-secondary md:mr-16">
                     <h2 className="flex justify-center items-center font-semibold text-4xl sm:text-5xl mb-7">WORK &amp; PROJECTS</h2>
                     <p className="font-light text-base max-w-lg mb-10">
-                            Providing Fabtastic service to the Cedar Rapids &amp; Iowa City Corridor in Eastern Iowa since 2018. 
-                            Follow us on <a className="text-tertiary hover:text-tertiary-dark transition duration-200 underline" href="https://www.facebook.com/FabtasticPainting/" target="_blank">Facebook</a> &amp;&nbsp;
+                        Providing Fabtastic service to the Cedar Rapids &amp; Iowa City Corridor in Eastern Iowa since 2018. 
+                        Follow us on <a className="text-tertiary hover:text-tertiary-dark transition duration-200 underline" href="https://www.facebook.com/FabtasticPainting/" target="_blank">Facebook</a> &amp;&nbsp;
                         <a className="text-tertiary hover:text-tertiary-dark transition duration-200 underline" href="https://www.instagram.com/fabtastic_paintingcr/" target="_blank">Instagram</a> to see more!
                     </p>
                     <div className="flex mt-4">
                         <div className="mx-auto">
-                            <Link to="/gallery" className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200">
+                            <Link to="/gallery" className="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200">
                                 SEE MORE
                             </Link>
                         </div>

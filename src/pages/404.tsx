@@ -29,7 +29,7 @@ const NotFoundPage: React.FC = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <Link to="/" className="px-4 py-2 text-lg text-secondary font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200 mt-10 mb-24">CLICK ME!</Link>
+              <Link to="/" className="px-4 py-2 text-lg text-secondary font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200 mt-10 mb-24">CLICK ME!</Link>
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@ const Services = () => {
                     </div>
                     <div className="flex mt-4">
                         <div className="mx-auto">
-                            <Link to="/services" className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200">
+                            <Link to="/services" className="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200">
                                 AND MORE!
                             </Link>
                         </div>
