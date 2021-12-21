@@ -8,7 +8,7 @@ interface SEOProps {
 }
 
 function Seo({ pageTitle, meta=[] }: SEOProps) {
-    const { site }: any = useStaticQuery(
+    const data = useStaticQuery(
         graphql`
             query {
                 site {
@@ -22,8 +22,8 @@ function Seo({ pageTitle, meta=[] }: SEOProps) {
         `
     )
 
-    const metaTitle: string = site.siteMetadata?.siteTitle
-    const metaDescription: string = site.siteMetadata?.siteDescription
+    const metaTitle: string = data.site.siteMetadata?.siteTitle
+    const metaDescription: string = data.site.siteMetadata?.siteDescription
 
     return (
         <Helmet
@@ -52,7 +52,7 @@ function Seo({ pageTitle, meta=[] }: SEOProps) {
                 },
                 {
                   name: `twitter:creator`,
-                  content: site.siteMetadata?.author || ``,
+                  content: data.site.siteMetadata?.author || ``,
                 },
                 {
                   name: `twitter:title`,
@@ -63,9 +63,7 @@ function Seo({ pageTitle, meta=[] }: SEOProps) {
                   content: metaDescription,
                 },
               ].concat(meta)}
-        >
-          {/* <script src="https://www.google.com/recaptcha/api.js" /> */}
-        </Helmet>
+        />
     )
 }
 
