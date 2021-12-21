@@ -61,7 +61,7 @@ const HeroPage: React.FC = () => {
                     <FadeIn>
                         <div className="flex">
                             <div className="mx-auto mt-10 md:mt-20 mb-4">
-                                <Link to="/contact-us" className="px-4 py-2 text-lg font-bold text-secondary bg-primary rounded-full hover:bg-primary-light transition duration-200">REQUEST A QUOTE</Link>
+                                <Link to="/contact-us" className="px-4 py-2 text-lg font-bold text-secondary bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200">REQUEST A QUOTE</Link>
                             </div>
                         </div>
                     </FadeIn>

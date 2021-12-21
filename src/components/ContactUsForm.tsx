@@ -37,7 +37,7 @@ const ContactUsForm = () => {
                         onChange={handleChange}
                         value={formState.name}
                         placeholder="Jane Doe"
-                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary mb-3"
+                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-tertiary mb-3"
                     />
 
                     <label className="block tracking-wide text-secondary text-xs font-bold mb-2" htmlFor="email">
@@ -50,7 +50,7 @@ const ContactUsForm = () => {
                         onChange={handleChange}
                         value={formState.email}
                         placeholder="example@address.com"
-                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary mb-3"
+                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-tertiary mb-3"
                     />
 
                     <label className="block tracking-wide text-secondary text-xs font-bold mb-2" htmlFor="phoneNumber">
@@ -63,7 +63,7 @@ const ContactUsForm = () => {
                         onChange={handleChange}
                         value={formState.phoneNumber}
                         placeholder="123-456-7890"
-                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary mb-3"
+                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-tertiary mb-3"
                     />
                 </div>
                 <div className="w-full md:w-3/5 px-3">
@@ -76,7 +76,7 @@ const ContactUsForm = () => {
                         onChange={handleChange}
                         value={formState.message}
                         placeholder="Brief description of project"
-                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary mb-3"
+                        className="appearance-none block w-full bg-white text-secondary border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-tertiary mb-3"
                         rows={9}
                     />
                 </div>
@@ -91,7 +91,7 @@ const ContactUsForm = () => {
                 <button
                     type="submit"
                     disabled={disableSubmit}
-                    className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200 disabled:opacity-50"
+                    className="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-secondary hover:text-primary transition duration-200 disabled:opacity-30"
                 >
                     SUBMIT
                 </button>
