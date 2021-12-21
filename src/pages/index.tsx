@@ -1,6 +1,6 @@
 import React from "react"
 
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage, getImage } from "gatsby-plugin-image"
 import BackgroundImage from 'gatsby-background-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import { Link, graphql, PageProps } from "gatsby"
@@ -8,29 +8,18 @@ import { Link, graphql, PageProps } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Hero from "../components/Hero"
+import Services from "../components/Services"
+import Gallery from "../components/Gallery"
+import Testimonials from "../components/Testimonials"
 import ContactUsForm from "../components/ContactUsForm"
 import FadeIn from "../components/FadeIn"
 
-import { FaBrush, FaPaintRoller, FaPaintBrush, FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
-import { HiOutlineHome, HiHome } from "react-icons/hi"
-import { GiWaterSplash } from "react-icons/gi"
-
 import { IndexQuery } from "../../graphql-types"
-
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css";
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import SwiperCore, {
-  Autoplay, Navigation, Pagination, Mousewheel, Keyboard
-} from 'swiper'
 
 const IndexPage: React.FC<PageProps<IndexQuery>> = ({ data }) => {
   const aboutUsImage = getImage(data.aboutUsBgImage?.childImageSharp?.gatsbyImageData);
 
   const aboutUsBgImage = convertToBgImage(aboutUsImage);
-
-  SwiperCore.use([Autoplay, Navigation, Pagination, Mousewheel, Keyboard]);
 
   return (
     <Layout>
@@ -85,153 +74,17 @@ const IndexPage: React.FC<PageProps<IndexQuery>> = ({ data }) => {
 
       {/* Services */}
       <FadeIn>
-        <div className="md:flex justify-center my-8 md:mt-32 md:mb-16 mx-8">
-          <div className="flex items-center justify-center">
-            <StaticImage
-            className=""
-            src="../images/services.webp"
-            alt="Services"
-            placeholder="none"
-            width={480}
-            height={600}
-          />
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex-col text-secondary md:ml-16 mt-10 md:mt-0">
-              <h3 className="flex font-medium tracking-widest mb-2">HIGH QUALITY &amp; AFFORDABLE</h3>
-              <h2 className="flex font-semibold text-4xl sm:text-5xl mb-7">SERVICES WE PROVIDE</h2>
-              <p className="flex font-light text-base max-w-lg mb-10">
-                We pride ourselves on our service, starting from your personal consultation all the way to the final walk-through.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-4">
-                <div className="flex-col">
-                  <div className="flex items-center font-lg font-medium pb-8">
-                    <FaBrush className="w-8 h-8 mr-4" />
-                    Residential Painting
-                  </div>
-                  <div className="flex items-center font-lg font-medium pb-8">
-                    <HiOutlineHome className="w-8 h-8 mr-4" />
-                    Interior Painting
-                  </div>
-                  <div className="flex items-center font-lg font-medium pb-8">
-                    <GiWaterSplash className="w-8 h-8 mr-4" />
-                    Power Washing
-                  </div>
-                </div>
-                <div className="flex-col">
-                  <div className="flex items-center font-lg font-medium pb-8">
-                    <FaPaintRoller className="w-8 h-8 mr-4" />
-                    Commerical Painting
-                  </div>
-                  <div className="flex items-center font-lg font-medium pb-8">
-                    <HiHome className="w-8 h-8 mr-4" />
-                    Exterior Painting
-                  </div>
-                  <div className="flex items-center font-lg font-medium pb-8">
-                    <FaPaintBrush className="w-8 h-8 mr-4" />
-                    Staining
-                  </div>
-                </div>
-              </div>
-              <div className="flex mt-4">
-                <div className="mx-auto">
-                  <Link to="/services" className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200">
-                    AND MORE!
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Services />
       </FadeIn>
 
       {/* Gallery */}
       <FadeIn>
-        <div className="md:flex justify-center my-8 md:my-16 mx-8">
-          <div className="flex items-center justify-center">
-            <div className="flex-col text-secondary md:mr-16">
-              <h2 className="flex justify-center items-center font-semibold text-4xl sm:text-5xl mb-7">WORK &amp; PROJECTS</h2>
-              <p className="font-light text-base max-w-lg mb-10">
-                Providing Fabtastic service to the Cedar Rapids &amp; Iowa City Corridor in Eastern Iowa since 2018. 
-                Follow us on <a className="text-tertiary hover:text-tertiary-dark transition duration-200 underline" href="https://www.facebook.com/FabtasticPainting/" target="_blank">Facebook</a> &amp;&nbsp;
-                <a className="text-tertiary hover:text-tertiary-dark transition duration-200 underline" href="https://www.instagram.com/fabtastic_paintingcr/" target="_blank">Instagram</a> to see more!
-              </p>
-              <div className="flex mt-4">
-                <div className="mx-auto">
-                  <Link to="/gallery" className="mx-auto px-4 py-2 text-lg font-bold bg-primary rounded-full hover:bg-primary-light transition duration-200">
-                    LEARN MORE
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center mt-10 md:mt-0">
-            <Swiper
-              id="swiper-color"
-              cssMode={true}
-              autoplay={{
-                "delay": 5000,
-              }}
-              navigation={true}
-              pagination={{"clickable": true}}
-              loop={true}
-              mousewheel={true}
-              keyboard={true}
-              className="max-w-md rounded-3xl"
-            >
-              {data.galleryPhotos.edges.map(image => (
-                <SwiperSlide key={image.node.id}>
-                  <GatsbyImage
-                    image={image.node.childImageSharp?.gatsbyImageData}
-                    alt="Gallery Photos"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+        <Gallery />
       </FadeIn>
 
       {/* Testimonials */}
       <FadeIn>
-        <div className="my-8 md:my-16 mx-8">
-          <div className="mx-auto max-w-7xl text-secondary">
-            <div className="flex justify-between">
-              <div className="flex-col">
-                <h3 className="flex font-medium tracking-widest mb-2">WHAT PEOPLE ARE SAYING</h3>
-                <h2 className="flex font-semibold text-4xl sm:text-5xl mb-7">TESTIMONIALS</h2>
-                <p className="flex font-light text-base max-w-lg mb-10">
-                  Don't believe us? Check out our customer write-ups and learn how we went above and beyond to make their spaces Fabtastic.
-                </p>
-              </div>
-              <div className="hidden md:flex text-primary text-opacity-50 gap-16">
-                <FaQuoteLeft className="w-24 h-24 mt-0 my-auto"/>
-                <FaQuoteRight className="w-24 h-24 mb-5 my-auto" />
-              </div>
-            </div>
-            <Swiper
-              id="swiper-color"
-              cssMode={true}
-              autoplay={{
-                "delay": 15000,
-              }}
-              pagination={{"clickable": true}}
-              loop={true}
-              mousewheel={true}
-              keyboard={true}
-            >
-              {data.testimonials.edges.map(testimonial => (
-                <SwiperSlide key={testimonial.node.id} className="my-auto">
-                  <div className="max-w-4xl mx-auto text-center">
-                    <p className="font-base font-light italic mb-6">"{testimonial.node.frontmatter?.content}"</p>
-                    <p className="font-base font-medium">{testimonial.node.frontmatter?.author}</p>
-                  </div>
-                  <div className="h-10" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+        <Testimonials />
       </FadeIn>
 
       {/* Request a quote form */}
@@ -262,38 +115,6 @@ export const pageQuery = graphql `
           placeholder: NONE,
           transformOptions: {cropFocus: CENTER, fit: COVER}
         )
-      }
-    }
-
-    galleryPhotos: allFile(
-      filter: {relativeDirectory: {eq: "gallery/featured"}, extension: {regex: "/(jpg)|(jpeg)|(png)/"}}
-    ) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            gatsbyImageData(
-              formats: [AUTO, WEBP, AVIF]
-              placeholder: NONE
-              transformOptions: {fit: COVER, cropFocus: CENTER}
-              width: 448
-              height: 448
-            )
-          }
-        }
-      }
-    }
-
-    testimonials: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            author
-            content
-          }
-          id
-        }
       }
     }
   }

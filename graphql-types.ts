@@ -3374,22 +3374,37 @@ export type MarkdownRemarkSortInput = {
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { placeholderImage?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined };
+export type Unnamed_1_Query = { file?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined };
+
+export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_2_Query = { allFile: { edges: Array<{ node: { id: string, childImageSharp?: { gatsbyImageData: any } | null | undefined } }> } };
+
+export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_3_Query = { file?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined };
 
 export type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type SiteTitleQueryQuery = { site?: { siteMetadata?: { title?: string | null | undefined } | null | undefined } | null | undefined };
 
-export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_2_Query = { site?: { siteMetadata?: { siteTitle?: string | null | undefined, siteDescription?: string | null | undefined, author?: string | null | undefined } | null | undefined } | null | undefined };
+export type Unnamed_4_Query = { site?: { siteMetadata?: { siteTitle?: string | null | undefined, siteDescription?: string | null | undefined, author?: string | null | undefined } | null | undefined } | null | undefined };
+
+export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_5_Query = { allMarkdownRemark: { edges: Array<{ node: { id: string, frontmatter?: { title?: string | null | undefined, author?: string | null | undefined, content?: string | null | undefined } | null | undefined } }> } };
 
 export type IndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexQuery = { aboutUsBgImage?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined, galleryPhotos: { edges: Array<{ node: { id: string, childImageSharp?: { gatsbyImageData: any } | null | undefined } }> }, testimonials: { edges: Array<{ node: { id: string, frontmatter?: { title?: string | null | undefined, author?: string | null | undefined, content?: string | null | undefined } | null | undefined } }> } };
+export type IndexQuery = { aboutUsBgImage?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined };
 
 export type GatsbyImageSharpFixedFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
 

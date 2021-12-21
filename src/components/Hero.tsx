@@ -1,19 +1,20 @@
 import React from 'react'
 
+import { Link, graphql, useStaticQuery } from 'gatsby'
+
 import { getImage } from 'gatsby-plugin-image'
 import BackgroundImage from 'gatsby-background-image'
 import { convertToBgImage } from 'gbimage-bridge'
-import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import { FaPaintRoller } from 'react-icons/fa'
 
 import FadeIn from './FadeIn'
 
 const HeroPage: React.FC = () => {
-    const { placeholderImage } = useStaticQuery(
+    const data = useStaticQuery(
         graphql`
             query {
-                placeholderImage: file(relativePath: {eq: "hero.webp"}) {
+                file(relativePath: {eq: "hero.webp"}) {
                     childImageSharp {
                         gatsbyImageData(
                             formats: [AUTO, WEBP, AVIF],
@@ -26,7 +27,7 @@ const HeroPage: React.FC = () => {
         `
     )
 
-    const heroImage = getImage(placeholderImage);
+    const heroImage = getImage(data.file.childImageSharp?.gatsbyImageData);
 
     const heroBgImage = convertToBgImage(heroImage);
 
