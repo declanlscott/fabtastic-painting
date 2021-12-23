@@ -41,7 +41,7 @@ const Banner: React.FC<BannerProps> = ({ pageTitle }) => {
             >
                 <FadeIn>
                     <div className="lg:h-96 h-80 flex justify-center items-center">
-                        <h1 className="lg:text-6xl md:text-5xl text-4xl font-bold text-white uppercase">{pageTitle}</h1>
+                        <h1 className="lg:text-6xl md:text-5xl text-4xl font-bold text-white uppercase tracking-wide">{pageTitle}</h1>
                     </div>
                 </FadeIn>
                 

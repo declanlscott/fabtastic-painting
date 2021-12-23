@@ -40,7 +40,7 @@ const HeroPage: React.FC = () => {
             >
                 <div className="flex-col md:px-8 px-4 md:py-20 py-10">
                     <FadeIn>
-                        <h1 className="flex justify-center text-center lg:text-6xl md:text-5xl text-4xl font-bold text-white">RESIDENTIAL &amp; COMMERCIAL</h1>
+                        <h1 className="flex justify-center text-center lg:text-6xl md:text-5xl text-4xl font-bold text-white tracking-wide">RESIDENTIAL &amp; COMMERCIAL</h1>
                     </FadeIn>
                     <FadeIn>
                         <div>
