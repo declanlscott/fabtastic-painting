@@ -44,7 +44,7 @@ const GalleryPage: React.FC<PageProps<GalleryQuery>> = ({ data }) => {
                 </div>
             </FadeIn>
 
-            <div className="max-w-2xl lg:max-w-5xl mx-auto mx-8 my-8 md:my-16">
+            <div className="max-w-2xl lg:max-w-5xl mx-auto px-8 my-8 md:my-16">
                 <Masonry
                     breakpointCols={breakpoints}
                     className="masonry-grid"
