@@ -17,7 +17,7 @@ const AboutUsPage: React.FC = () => {
             <Banner pageTitle="About Us" />
 
             <FadeIn>
-                <div className="md:flex justify-center my-8 md:mt-32 md:mb-16 mx-8">
+                <div className="md:flex justify-center my-8 md:mt-24 md:mb-16 mx-8">
                     <div className="flex justify-center items-center">
                         <div className="flex-col text-secondary md:mr-16">
                             <h3 className="flex font-medium tracking-widest mb-2">ESTABLISHED 2018</h3>
