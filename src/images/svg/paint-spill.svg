@@ -9,7 +9,8 @@
    height="381.49591"
    viewBox="0 0 460.45251 381.49591"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"><defs
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
      id="defs6"><linearGradient
        id="linearGradient17997"><stop
          style="stop-color:#e6c279;stop-opacity:1;"
@@ -941,12 +942,7 @@
        x1="126.42586"
        y1="83.040497"
        x2="353.97067"
-       y2="83.040497" /></defs><sodipodi:namedview
-     id="namedview4"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     showgrid="false" /><g
+       y2="83.040497" /></defs><g
      id="g8"
      transform="matrix(1.3333333,0,0,-1.3333333,-48.412132,445.3639)"><g
        id="g32"><g
