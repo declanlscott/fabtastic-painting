@@ -14,7 +14,7 @@ const HeroPage: React.FC = () => {
     const data = useStaticQuery(
         graphql`
             query {
-                file(relativePath: {eq: "hero.webp"}) {
+                file(relativePath: {eq: "hero.jpg"}) {
                     childImageSharp {
                         gatsbyImageData(
                             formats: [AUTO, WEBP, AVIF],

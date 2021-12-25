@@ -3419,6 +3419,11 @@ export type IndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type IndexQuery = { aboutUsBgImage?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined };
 
+export type Unnamed_6_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_6_Query = { file?: { childImageSharp?: { gatsbyImageData: any } | null | undefined } | null | undefined };
+
 export type GatsbyImageSharpFixedFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
 
 export type GatsbyImageSharpFixed_TracedSvgFragment = { tracedSVG?: string | null | undefined, width: number, height: number, src: string, srcSet: string };

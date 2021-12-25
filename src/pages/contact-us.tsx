@@ -27,7 +27,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Call Us</h3>
-                            <a className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200" href="tel:+1319-202-4769">(319) 202-4769</a>
+                            <a className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200" href="tel:+1319-202-4769">(319) 202-4769</a>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -38,7 +38,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Email Us</h3>
-                            <a className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200" href="mailto:fabtasticpainting@gmail.com">fabtasticpainting@gmail.com</a>
+                            <a className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200" href="mailto:fabtasticpainting@gmail.com">fabtasticpainting@gmail.com</a>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -49,7 +49,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Facebook</h3>
-                            <a className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://www.facebook.com/FabtasticPainting/" target="_blank">Fabtastic Painting</a>
+                            <a className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://www.facebook.com/FabtasticPainting/" target="_blank">Fabtastic Painting</a>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -60,7 +60,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Instagram</h3>
-                            <a className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://www.instagram.com/fabtastic_paintingcr/" target="_blank">@fabtastic_paintingcr</a>
+                            <a className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://www.instagram.com/fabtastic_paintingcr/" target="_blank">@fabtastic_paintingcr</a>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -71,7 +71,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">WhatsApp</h3>
-                            <a className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://wa.me/13192024769" target="_blank">(319) 202-4769</a>
+                            <a className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://wa.me/13192024769" target="_blank">(319) 202-4769</a>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -82,7 +82,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Messenger</h3>
-                            <a className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://m.me/fabtasticpainting" target="_blank">fabtasticpainting</a>
+                            <a className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200" href="https://m.me/fabtasticpainting" target="_blank">fabtasticpainting</a>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -93,7 +93,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Location</h3>
-                            <p className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200">Cedar Rapids, IA 52404</p>
+                            <p className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200">Cedar Rapids, IA 52404</p>
                         </div>
                     </FadeIn>
                     <FadeIn>
@@ -104,7 +104,7 @@ const ContactUsPage: React.FC = () => {
                                 </div>
                             </div>
                             <h3 className="flex justify-center text-secondary text-2xl font-semibold mb-1">Hours</h3>
-                            <p className="flex justify-center text-tertiary hover:text-tertiary-dark transition duration-200">Mon - Fri 8AM - 7PM <br />Sat - Sun 10AM - 4PM</p>
+                            <p className="flex justify-center text-center text-tertiary hover:text-tertiary-dark transition duration-200">Mon - Fri 8AM - 7PM <br />Sat - Sun 10AM - 4PM</p>
                         </div>
                     </FadeIn>
                 </div>

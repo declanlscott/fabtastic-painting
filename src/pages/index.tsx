@@ -49,6 +49,7 @@ const IndexPage: React.FC<PageProps<IndexQuery>> = ({ data }) => {
                   src="../images/paint-brush-stroke.webp"
                   alt=""
                   placeholder="none"
+                  formats={["auto", "webp", "avif"]}
                 />
                 <h2 className="row-start-1 col-start-1 relative grid lg:text-5xl md:text-4xl text-3xl font-semibold text-secondary text-center items-center">ABOUT US</h2>
               </div>
@@ -56,7 +57,7 @@ const IndexPage: React.FC<PageProps<IndexQuery>> = ({ data }) => {
             <FadeIn><hr className="border-secondary w-48 mx-auto my-7" /></FadeIn>
             <FadeIn>
               <p className="text-center lg:max-w-4xl md:text-base text-sm text-light text-secondary mx-auto">
-                Fabtastic Painting is a woman-owned company founded in 2018 with the goal of providing high-quality and affordable painting services to the Corridor & Eastern Iowa. 
+                Fabtastic Painting is a woman-owned company founded in 2018 with the goal of providing high-quality and affordable painting services to the Corridor &amp; Eastern Iowa. 
                 With over 35 years combined experience in the construction industry, we decided to focus and specialize in the one area we enjoy and take pride in...painting! 
                 Call us today about your next painting project, we look forward to working with you to make it <i>Fabtastic</i>!
               </p>
@@ -108,7 +109,7 @@ export default IndexPage
 
 export const pageQuery = graphql `
   query Index {
-    aboutUsBgImage: file(relativePath: {eq: "about-us.webp"}) {
+    aboutUsBgImage: file(relativePath: {eq: "about-us.jpg"}) {
       childImageSharp {
         gatsbyImageData(
           formats: [AUTO, WEBP, AVIF],

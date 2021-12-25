@@ -35,9 +35,9 @@ const AboutUsPage: React.FC = () => {
                     </div>
                     <div className="flex justify-center items-center mt-10 md:mt-0">
                         <StaticImage
-                            className=""
-                            src="../images/about-us-grid.webp"
+                            src="../images/about-us-grid.jpg"
                             alt="About Us"
+                            formats={["auto", "webp", "avif"]}
                         />
                     </div>
                 </div>

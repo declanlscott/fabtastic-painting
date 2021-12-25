@@ -16,13 +16,14 @@ const Services = () => {
                     src="../images/services.webp"
                     alt="Services"
                     placeholder="none"
+                    formats={["auto", "webp", "avif"]}
                     width={480}
                     height={600}
                 />
             </div>
             <div className="flex items-center justify-center">
                 <div className="flex-col text-secondary md:ml-16 mt-10 md:mt-0">
-                    <h3 className="flex font-medium tracking-widest mb-2">HIGH QUALITY &amp; AFFORDABLE</h3>
+                    <h3 className="flex font-medium tracking-widest mb-2">HIGH-QUALITY &amp; AFFORDABLE</h3>
                     <h2 className="flex font-semibold text-4xl sm:text-5xl mb-7">SERVICES WE PROVIDE</h2>
                     <p className="flex font-light text-base max-w-lg mb-10">
                         We pride ourselves on our service, starting from your personal consultation all the way to the final walk-through.
