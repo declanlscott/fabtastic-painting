@@ -40,10 +40,12 @@ const Navbar: React.FC<NavbarProps> = ({ siteTitle }) => {
                     <div className="flex space-x-7">
                         <Link to="/" className="flex items-center py-3">
                             <StaticImage
-                                src="../images/fp-logo.webp"
+                                src="../images/fp-logo.jpg"
                                 alt={siteTitle}
                                 className="inline-block align-top"
                                 placeholder="none"
+                                formats={["auto", "webp", "avif"]}
+                                loading="eager"
                                 width={195}
                                 height={125}
                             />
