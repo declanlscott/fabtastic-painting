@@ -2,12 +2,14 @@ import React, { ReactNode } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 interface FadeInProps {
-    children: ReactNode
+    children: ReactNode,
+    triggerOnce?: boolean
 }
 
-const FadeIn: React.FC<FadeInProps> = ({ children }) => {
+const FadeIn: React.FC<FadeInProps> = ({ children, triggerOnce = true }) => {
     const { ref, inView } = useInView({
         threshold: 0,
+        triggerOnce
     });
 
     return (
