@@ -3,8 +3,6 @@ import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import Masonry from 'react-masonry-css'
-
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Banner from '../components/Banner'
@@ -13,12 +11,6 @@ import FadeIn from '../components/FadeIn'
 import { GalleryQuery } from '../../graphql-types'
 
 const GalleryPage: React.FC<PageProps<GalleryQuery>> = ({ data }) => {
-    const breakpoints = {
-        default: 3,
-        1023: 2,
-        640: 1
-    }
-
     return (
         <Layout>
 
@@ -45,20 +37,18 @@ const GalleryPage: React.FC<PageProps<GalleryQuery>> = ({ data }) => {
             </FadeIn>
 
             <div className="max-w-2xl lg:max-w-5xl mx-auto px-8 my-8 md:my-16">
-                <Masonry
-                    breakpointCols={breakpoints}
-                    className="masonry-grid"
-                    columnClassName="masonry-grid_column max-w-xs mx-auto lg:mx-0"
-                >
+                <div className="masonry sm:masonry-sm lg:masonry-lg">
                     {data.galleryPhotos.edges.map(image => (
                         <FadeIn key={image.node.id}>
-                            <GatsbyImage
-                                image={image.node.childImageSharp?.gatsbyImageData}
-                                alt="Gallery Photos"
-                            />
+                            <div className="break-inside pb-8 max-w-xs mx-auto">
+                                <GatsbyImage
+                                    image={image.node.childImageSharp?.gatsbyImageData}
+                                    alt="Gallery Photos"
+                                />
+                            </div>
                         </FadeIn>
                     ))}
-                </Masonry>
+                </div>
             </div>
 
         </Layout>
