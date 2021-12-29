@@ -2,6 +2,7 @@ import React from 'react'
 
 import { graphql, PageProps } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { SRLWrapper } from 'simple-react-lightbox'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
@@ -11,6 +12,19 @@ import FadeIn from '../components/FadeIn'
 import { GalleryQuery } from '../../graphql-types'
 
 const GalleryPage: React.FC<PageProps<GalleryQuery>> = ({ data }) => {
+    const lightboxOptions = {
+        settings: {},
+        caption: {showCaption: false},
+        buttons: {},
+        thumbnails: {},
+        progressBar:{
+            backgroundColor: '#403520',
+            fillColor: '#E6C279',
+            height: '3px',
+            showProgressBar: true
+        },
+      }
+
     return (
         <Layout>
 
@@ -38,16 +52,23 @@ const GalleryPage: React.FC<PageProps<GalleryQuery>> = ({ data }) => {
 
             <div className="max-w-2xl lg:max-w-5xl mx-auto px-8 my-8 md:my-16">
                 <div className="masonry sm:masonry-sm lg:masonry-lg">
-                    {data.galleryPhotos.edges.map(image => (
-                        <FadeIn key={image.node.id}>
-                            <div className="break-inside pb-8 max-w-xs mx-auto">
-                                <GatsbyImage
-                                    image={image.node.childImageSharp?.gatsbyImageData}
-                                    alt="Gallery Photos"
-                                />
-                            </div>
-                        </FadeIn>
-                    ))}
+                    <SRLWrapper options={lightboxOptions}>
+                        {data.galleryPhotos.edges.map((image, index) => {
+                            return (
+                                <FadeIn key={image.node.id}>
+                                    <div className="break-inside mb-8 max-w-xs mx-auto overflow-hidden">
+                                        <a href={data.galleryPhotos.edges[index].node.publicURL as string | undefined}>
+                                            <GatsbyImage
+                                                image={image.node.childImageSharp?.gatsbyImageData}
+                                                alt="Gallery Photos"
+                                                className="transform hover:scale-125 transition duration-700 ease-in-out"
+                                            />
+                                        </a>
+                                    </div>
+                                </FadeIn>
+                            )
+                        })}
+                    </SRLWrapper>
                 </div>
             </div>
 
@@ -66,6 +87,7 @@ export const pageQuery = graphql`
             edges {
                 node {
                     id
+                    publicURL
                     childImageSharp {
                         gatsbyImageData(
                             formats: [AUTO, WEBP, AVIF]
