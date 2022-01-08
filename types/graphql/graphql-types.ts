@@ -675,6 +675,7 @@ export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['Int']>;
 };
 
 export type Query = {
@@ -1121,6 +1122,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
   author?: InputMaybe<StringQueryOperatorInput>;
   content?: InputMaybe<StringQueryOperatorInput>;
+  date?: InputMaybe<IntQueryOperatorInput>;
 };
 
 export type MarkdownHeadingFilterListInput = {
@@ -1375,6 +1377,7 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___title'
   | 'childrenMarkdownRemark___frontmatter___author'
   | 'childrenMarkdownRemark___frontmatter___content'
+  | 'childrenMarkdownRemark___frontmatter___date'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1431,6 +1434,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___author'
   | 'childMarkdownRemark___frontmatter___content'
+  | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -3224,6 +3228,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___title'
   | 'frontmatter___author'
   | 'frontmatter___content'
+  | 'frontmatter___date'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -3399,7 +3404,7 @@ export type Unnamed_4_Query = { site?: { siteMetadata?: { siteTitle?: string | n
 export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_5_Query = { allMarkdownRemark: { edges: Array<{ node: { id: string, frontmatter?: { title?: string | null | undefined, author?: string | null | undefined, content?: string | null | undefined } | null | undefined } }> } };
+export type Unnamed_5_Query = { allMarkdownRemark: { edges: Array<{ node: { id: string, frontmatter?: { title?: string | null | undefined, author?: string | null | undefined, content?: string | null | undefined, date?: number | null | undefined } | null | undefined } }> } };
 
 export type GalleryQueryVariables = Exact<{ [key: string]: never; }>;
 
