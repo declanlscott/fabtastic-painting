@@ -14,7 +14,7 @@ import Testimonials from "../components/Testimonials"
 import ContactUsForm from "../components/ContactUsForm"
 import FadeIn from "../components/FadeIn"
 
-import { IndexQuery } from "../../graphql-types"
+import { IndexQuery } from "../../types/graphql/graphql-types"
 
 const IndexPage: React.FC<PageProps<IndexQuery>> = ({ data }) => {
   const aboutUsImage = getImage(data.aboutUsBgImage?.childImageSharp?.gatsbyImageData);

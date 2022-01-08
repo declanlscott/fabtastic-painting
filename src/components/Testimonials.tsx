@@ -16,13 +16,16 @@ const Testimonials = () => {
     const data = useStaticQuery(
         graphql`
             query {
-                allMarkdownRemark {
+                allMarkdownRemark (
+                    sort: {fields: frontmatter___date, order: ASC}
+                ) {
                     edges {
                         node {
                             frontmatter {
                                 title
                                 author
                                 content
+                                date
                             }
                             id
                         }

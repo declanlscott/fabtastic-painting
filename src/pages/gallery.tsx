@@ -9,7 +9,7 @@ import Seo from '../components/Seo'
 import Banner from '../components/Banner'
 import FadeIn from '../components/FadeIn'
 
-import { GalleryQuery } from '../../graphql-types'
+import { GalleryQuery } from '../../types/graphql/graphql-types'
 
 const GalleryPage: React.FC<PageProps<GalleryQuery>> = ({ data }) => {
     const lightboxOptions = {
