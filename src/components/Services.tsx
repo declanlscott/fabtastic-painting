@@ -46,7 +46,7 @@ const Services = () => {
                         <div className="flex-col">
                             <div className="flex items-center font-lg font-medium pb-8">
                                 <FaPaintRoller className="w-8 h-8 mr-4" />
-                                Commerical Painting
+                                Commercial Painting
                             </div>
                             <div className="flex items-center font-lg font-medium pb-8">
                                 <HiHome className="w-8 h-8 mr-4" />
