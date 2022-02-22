@@ -10,13 +10,27 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white pt-8 pb-14">
                     <div className="flex-col">
                         <h4 className="flex justify-center text-lg font-bold mb-4">ABOUT US</h4>
-                        <p className="text-sm">
-                            Fabtastic Painting is a woman-owned company. We are 
-                            a BBB Accredited Business. Focused on residential 
-                            and commercial painting. Specializing in interior &amp; exterior 
-                            painting. Serving the Cedar Rapids &amp; Iowa City corridor. 
-                            State registered &amp; insured.
-                        </p>
+                        <div className="flex">
+                            <a
+                                className="my-auto"
+                                style={{textDecoration: "none", objectFit: "cover", minWidth: "80px", maxWidth: "80px"}}
+                                target="_blank"
+                                title="Click for the Business Profile for Fabtastic Painting LLC"
+                                href="https://www.bbb.org/us/ia/cedar-rapids/profile/painting-contractors/fabtastic-painting-llc-0664-32134056?utm_campaign=bbb_seal&utm_content=Fabtastic%20Painting%20LLC&utm_medium=website&utm_source=seal_click_32134056"
+                            >
+                                <img
+                                    alt="Click for the Business Profile for Fabtastic Painting LLC"
+                                    src="https://www.bbb.org/TerminusContent/dist/img/dynamic-seal/ab-seal-vertical-blue.svg"
+                                />
+                            </a>
+                            <p className="text-sm ml-2">
+                                Fabtastic Painting is a woman-owned company. We are 
+                                a BBB Accredited Business. Focused on residential 
+                                and commercial painting. Specializing in interior &amp; exterior 
+                                painting. Serving the Cedar Rapids &amp; Iowa City corridor. 
+                                State registered &amp; insured.
+                            </p>
+                        </div>
                     </div>
                     <div className="flex-col">
                         <h4 className="flex justify-center text-lg font-bold mb-4">CONTACT US</h4>

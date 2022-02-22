@@ -9,65 +9,84 @@ import { GiWaterSplash } from "react-icons/gi"
 
 const Services = () => {
     return (
-        <div className="md:flex justify-center my-8 md:mt-32 md:mb-16 mx-8">
-            <div className="flex items-center justify-center">
-                <StaticImage
-                    className=""
-                    src="../images/services.webp"
-                    alt="Services"
-                    placeholder="none"
-                    formats={["auto", "webp", "avif"]}
-                    width={480}
-                    height={600}
-                />
-            </div>
-            <div className="flex items-center justify-center">
-                <div className="flex-col text-secondary md:ml-16 mt-10 md:mt-0">
-                    <h3 className="flex font-medium tracking-widest mb-2">HIGH-QUALITY &amp; AFFORDABLE</h3>
-                    <h2 className="flex font-semibold text-4xl sm:text-5xl mb-7">SERVICES WE PROVIDE</h2>
-                    <p className="flex font-light text-base max-w-lg mb-10">
-                        We pride ourselves on our service, starting from your personal consultation all the way to the final walk-through.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-4">
-                        <div className="flex-col">
-                            <div className="flex items-center font-lg font-medium pb-8">
-                                <FaBrush className="w-8 h-8 mr-4" />
-                                Residential Painting
-                            </div>
-                            <div className="flex items-center font-lg font-medium pb-8">
-                                <HiOutlineHome className="w-8 h-8 mr-4" />
-                                Interior Painting
-                            </div>
-                            <div className="flex items-center font-lg font-medium pb-8">
-                                <GiWaterSplash className="w-8 h-8 mr-4" />
-                                Power Washing
-                            </div>
-                        </div>
-                        <div className="flex-col">
-                            <div className="flex items-center font-lg font-medium pb-8">
-                                <FaPaintRoller className="w-8 h-8 mr-4" />
-                                Commercial Painting
-                            </div>
-                            <div className="flex items-center font-lg font-medium pb-8">
-                                <HiHome className="w-8 h-8 mr-4" />
-                                Exterior Painting
-                            </div>
-                            <div className="flex items-center font-lg font-medium pb-8">
-                                <FaPaintBrush className="w-8 h-8 mr-4" />
-                                Staining
-                            </div>
-                        </div>
+        <>
+            <div className="flex justify-center mx-8 my-8 md:mt-16">
+                <a
+                    className="w-96"
+                    style={{textDecoration: "none"}}
+                    target="_blank"
+                    title="Click for the Business Profile for Fabtastic Painting LLC"
+                    href="https://www.bbb.org/us/ia/cedar-rapids/profile/painting-contractors/fabtastic-painting-llc-0664-32134056?utm_campaign=bbb_seal&utm_content=Fabtastic%20Painting%20LLC&utm_medium=website&utm_source=seal_click_32134056"
+                >
+                    <img
+                        alt="Click for the Business Profile for Fabtastic Painting LLC"
+                        src="https://www.bbb.org/TerminusContent/dist/img/dynamic-seal/ab-seal-horizontal-blue.svg"
+                    />
+                    <div className="flex justify-center pt-2">
+                        <span className="text-xl md:text-2xl" style={{color: "#015A75", fontWeight: "900", fontFamily: "Arial, Helvetica, sans-serif"}}>BBB RATING: A+</span>
                     </div>
-                    <div className="flex mt-4">
-                        <div className="mx-auto">
-                            <Link to="/services" className="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200">
-                                AND MORE!
-                            </Link>
+                </a>
+            </div>
+            <div className="md:flex justify-center my-8 md:mt-16 md:mb-16 mx-8">
+                <div className="flex items-center justify-center">
+                    <StaticImage
+                        className=""
+                        src="../images/services.webp"
+                        alt="Services"
+                        placeholder="none"
+                        formats={["auto", "webp", "avif"]}
+                        width={480}
+                        height={600}
+                    />
+                </div>
+                <div className="flex items-center justify-center">
+                    <div className="flex-col text-secondary md:ml-16 mt-10 md:mt-0">
+                        <h3 className="flex font-medium tracking-widest mb-2">HIGH-QUALITY &amp; AFFORDABLE</h3>
+                        <h2 className="flex font-semibold text-4xl sm:text-5xl mb-7">SERVICES WE PROVIDE</h2>
+                        <p className="flex font-light text-base max-w-lg mb-10">
+                            We pride ourselves on our service, starting from your personal consultation all the way to the final walk-through.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-4">
+                            <div className="flex-col">
+                                <div className="flex items-center font-lg font-medium pb-8">
+                                    <FaBrush className="w-8 h-8 mr-4" />
+                                    Residential Painting
+                                </div>
+                                <div className="flex items-center font-lg font-medium pb-8">
+                                    <HiOutlineHome className="w-8 h-8 mr-4" />
+                                    Interior Painting
+                                </div>
+                                <div className="flex items-center font-lg font-medium pb-8">
+                                    <GiWaterSplash className="w-8 h-8 mr-4" />
+                                    Power Washing
+                                </div>
+                            </div>
+                            <div className="flex-col">
+                                <div className="flex items-center font-lg font-medium pb-8">
+                                    <FaPaintRoller className="w-8 h-8 mr-4" />
+                                    Commercial Painting
+                                </div>
+                                <div className="flex items-center font-lg font-medium pb-8">
+                                    <HiHome className="w-8 h-8 mr-4" />
+                                    Exterior Painting
+                                </div>
+                                <div className="flex items-center font-lg font-medium pb-8">
+                                    <FaPaintBrush className="w-8 h-8 mr-4" />
+                                    Staining
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex mt-4">
+                            <div className="mx-auto">
+                                <Link to="/services" className="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200">
+                                    AND MORE!
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
