@@ -155,7 +155,7 @@ const ServicesPage: React.FC = () => {
                         <FadeIn>
                             <p className="text-center max-w-xl md:text-base text-sm text-light text-white mx-auto px-8 my-7">
                                 Need our professional services for your home or business? 
-                                Contact us today for a free esimate of your next project!
+                                Contact us today for a free estimate of your next project!
                             </p>
                         </FadeIn>
                         <FadeIn>
