@@ -45,11 +45,5 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        fileName: `./types/graphql/graphql-types.ts`
-      }
-    },
   ],
 }
