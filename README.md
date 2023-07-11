@@ -11,5 +11,3 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://www.netlify.com/"><img src="https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-svg-vector.svg" width=128></a>
 </div>
-
-
