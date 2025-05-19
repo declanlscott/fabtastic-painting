@@ -1,0 +1,78 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+
+import services from "../assets/services.png";
+---
+
+<div class="md:flex justify-center my-8 md:mt-16 md:mb-16 mx-8">
+  <div class="flex items-center justify-center">
+    <Picture
+      src={services}
+      alt="Services"
+      formats={["webp", "avif"]}
+      width={480}
+      height={600}
+    />
+  </div>
+
+  <div class="flex items-center justify-center">
+    <div class="flex-col text-secondary md:ml-16 mt-10 md:mt-0">
+      <h3 class="flex font-medium tracking-widest mb-2 uppercase">
+        High-Quality & Affordable
+      </h3>
+      <h2 class="flex font-semibold text-4xl sm:text-5xl mb-7 uppercase">
+        Services We Provide
+      </h2>
+      <p class="flex font-light text-base max-w-lg mb-10">
+        We pride ourselves on our service, starting from your personal
+        consultation all the way to the final walk-through.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:gap-4">
+        <div class="flex-col">
+          <div class="flex items-center font-lg font-medium pb-8">
+            <Icon name="fa6-solid:brush" class="size-8 mr-4" />
+            Residential Painting
+          </div>
+
+          <div class="flex items-center font-lg font-medium pb-8">
+            <Icon name="heroicons:home" class="size-8 mr-4" />
+            Interior Painting
+          </div>
+
+          <div class="flex items-center font-lg font-medium pb-8">
+            <Icon name="game-icons:water-splash" class="size-8 mr-4" />
+            Power Washing
+          </div>
+        </div>
+
+        <div class="flex-col">
+          <div class="flex items-center font-lg font-medium pb-8">
+            <Icon name="fa6-solid:paint-roller" class="size-8 mr-4" />
+            Commercial Painting
+          </div>
+
+          <div class="flex items-center font-lg font-medium pb-8">
+            <Icon name="heroicons:home-solid" class="size-8 mr-4" />
+            Exterior Painting
+          </div>
+
+          <div class="flex items-center font-lg font-medium pb-8">
+            <Icon name="fa6-solid:paintbrush" class="size-8 mr-4" />
+            Staining
+          </div>
+        </div>
+      </div>
+      <div class="flex mt-4">
+        <div class="mx-auto">
+          <a
+            href="/services"
+            class="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200 uppercase"
+          >
+            And More!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

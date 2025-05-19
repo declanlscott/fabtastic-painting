@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="hidden md:block bg-secondary">
+  <div class="max-w-7xl mx-auto md:px-8 sm:px-4 px-2">
+    <div class="flex justify-between">
+      <div class="flex space-x-12 my-2">
+        <div class="flex items-center">
+          <a
+            href="mailto:fabtasticpainting@gmail.com"
+            class="flex items-center text-white text-sm font-light hover:text-primary transition duration-200"
+          >
+            <Icon
+              name="fa6-regular:envelope"
+              class="text-primary mr-2 size-4"
+            />fabtasticpainting@gmail.com
+          </a>
+        </div>
+
+        <a
+          href="tel:+1319-202-4769"
+          class="flex items-center text-white text-sm font-light hover:text-primary transition duration-200"
+        >
+          <Icon name="fa6-solid:phone" class="text-primary mr-2 size-4" />
+          (319) 202-4769
+        </a>
+      </div>
+
+      <div class="flex items-center space-x-12">
+        <ul class="flex">
+          <li>
+            <a
+              href="https://www.facebook.com/FabtasticPainting/"
+              target="_blank"
+              class="flex px-2.5 text-white hover:text-primary transition duration-200"
+            >
+              <Icon name="fa6-brands:facebook-f" class="size-4" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.instagram.com/fabtastic_paintingcr/"
+              target="_blank"
+              class="flex px-2.5 text-white hover:text-primary transition duration-200"
+            >
+              <Icon name="fa6-brands:instagram" class="size-4" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://wa.me/13192024769"
+              target="_blank"
+              class="flex px-2.5 text-white hover:text-primary transition duration-200"
+            >
+              <Icon name="fa6-brands:whatsapp" class="size-4" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://m.me/fabtasticpainting"
+              target="_blank"
+              class="flex px-2.5 text-white hover:text-primary transition duration-200"
+            >
+              <Icon name="fa6-brands:facebook-messenger" class="size-4" />
+            </a>
+          </li>
+        </ul>
+
+        <a
+          href="/contact-us"
+          class="text-sm font-light gap-2 flex items-center my-2 text-white hover:text-primary transition duration-200"
+          >Contact Us<Icon name="fa6-solid:arrow-right-long" /></a
+        >
+      </div>
+    </div>
+  </div>
+</div>

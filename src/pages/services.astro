@@ -1,0 +1,255 @@
+---
+import { Icon } from "astro-icon/components";
+import { getImage } from "astro:assets";
+
+import contactUsImage from "../assets/gallery/31.jpg";
+import Banner from "../components/banner.astro";
+import { FadeIn } from "../components/fade-in";
+import Testimonials from "../components/testimonials.astro";
+import Layout from "../layouts/layout.astro";
+
+const contactUsBgImage = await getImage({
+  src: contactUsImage,
+  format: "webp",
+});
+---
+
+<Layout title="Services">
+  <Banner pageTitle="Services" />
+
+  <FadeIn client:load>
+    <div class="lg:flex justify-center mt-8 md:mt-24 mx-8 lg:mr-32">
+      <div class="flex justify-center items-center">
+        <div class="flex-col text-secondary lg:mr-16">
+          <h3
+            class="flex sm:justify-center lg:justify-end lg:text-right font-medium tracking-widest mb-2 uppercase"
+          >
+            High-Quality & Affordable
+          </h3>
+
+          <h2
+            class="flex justify-center lg:justify-end lg:text-right items-center font-semibold text-4xl sm:text-5xl mb-7 uppercase"
+          >
+            Services We Provide
+          </h2>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <p class="font-light text-base max-w-sm lg:max-w-md">
+          Specializing in interior &amp; exterior painting, but we will provide
+          very competitive rates and a satisfaction guarantee no matter what
+          your next project needs.
+        </p>
+      </div>
+    </div>
+  </FadeIn>
+
+  <div class="container mx-auto md:px-8 px-4">
+    <div
+      class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-20 mt-16 mb-24"
+    >
+      <FadeIn client:load>
+        <div class="flex-col max-w-sm mx-auto">
+          <div class="flex justify-center">
+            <div
+              class="border border-tertiary-dark bg-primary h-16 w-16 rounded-full flex justify-center items-center transform transition duration-500 hover:scale-110 my-6"
+            >
+              <Icon name="fa6-solid:brush" class="size-8 text-secondary" />
+            </div>
+          </div>
+
+          <h3
+            class="flex justify-center text-center text-secondary text-2xl font-semibold mb-4"
+          >
+            Residential Painting
+          </h3>
+
+          <p
+            class="flex justify-center text-center font-light text-tertiary-dark leading-relaxed"
+          >
+            Whether it's your living room, bedroom, kitchen, or bath, an accent
+            wall or the whole house&mdash;we can handle any residential painting
+            needs.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <div class="flex-col max-w-sm mx-auto">
+          <div class="flex justify-center">
+            <div
+              class="border border-tertiary-dark bg-primary h-16 w-16 rounded-full flex justify-center items-center transform transition duration-500 hover:scale-110 my-6"
+            >
+              <Icon
+                name="fa6-solid:paint-roller"
+                class="size-8 text-secondary"
+              />
+            </div>
+          </div>
+
+          <h3
+            class="flex justify-center text-center text-secondary text-2xl font-semibold mb-4"
+          >
+            Commercial Painting
+          </h3>
+
+          <p
+            class="flex justify-center text-center font-light text-tertiary-dark leading-relaxed"
+          >
+            We love commercial jobs&mdash;let us refresh the existing look of
+            your business inside or out&mdash;or better yet, give it an all new
+            appearance!
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <div class="flex-col max-w-sm mx-auto">
+          <div class="flex justify-center">
+            <div
+              class="border border-tertiary-dark bg-primary h-16 w-16 rounded-full flex justify-center items-center transform transition duration-500 hover:scale-110 my-6"
+            >
+              <Icon name="heroicons:home" class="size-8 text-secondary" />
+            </div>
+          </div>
+
+          <h3
+            class="flex justify-center text-center text-secondary text-2xl font-semibold mb-4"
+          >
+            Interior Painting
+          </h3>
+
+          <p
+            class="flex justify-center text-center font-light text-tertiary-dark leading-relaxed"
+          >
+            From walls to ceilings, to cabinet doors and basement
+            floors&mdash;we've got all of your interior painting needs covered.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <div class="flex-col max-w-sm mx-auto">
+          <div class="flex justify-center">
+            <div
+              class="border border-tertiary-dark bg-primary h-16 w-16 rounded-full flex justify-center items-center transform transition duration-500 hover:scale-110 my-6"
+            >
+              <Icon name="heroicons:home-solid" class="size-8 text-secondary" />
+            </div>
+          </div>
+
+          <h3
+            class="flex justify-center text-center text-secondary text-2xl font-semibold mb-4"
+          >
+            Exterior Painting
+          </h3>
+
+          <p
+            class="flex justify-center text-center font-light text-tertiary-dark leading-relaxed"
+          >
+            Masonry or wood siding, brick, stone, foundations, window/door trim,
+            garages and sheds&mdash;we can make your exterior look new again.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <div class="flex-col max-w-sm mx-auto">
+          <div class="flex justify-center">
+            <div
+              class="border border-tertiary-dark bg-primary h-16 w-16 rounded-full flex justify-center items-center transform transition duration-500 hover:scale-110 my-6"
+            >
+              <Icon name="fa6-solid:paintbrush" class="size-8 text-secondary" />
+            </div>
+          </div>
+
+          <h3
+            class="flex justify-center text-center text-secondary text-2xl font-semibold mb-4"
+          >
+            Staining
+          </h3>
+
+          <p
+            class="flex justify-center text-center font-light text-tertiary-dark leading-relaxed"
+          >
+            Interior doors, cabinets, bathroom vanities, and more, to decks and
+            fences&mdash;we do regular staining as well as unique custom
+            finishing techniques to make your project really stand out.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <div class="flex-col max-w-sm mx-auto">
+          <div class="flex justify-center">
+            <div
+              class="border border-tertiary-dark bg-primary h-16 w-16 rounded-full flex justify-center items-center transform transition duration-500 hover:scale-110 my-6"
+            >
+              <Icon
+                name="fa6-solid:ellipsis-vertical"
+                class="size-8 text-secondary"
+              />
+            </div>
+          </div>
+
+          <h3
+            class="flex justify-center text-center text-secondary text-2xl font-semibold mb-4"
+          >
+            And More!
+          </h3>
+
+          <p
+            class="flex justify-center text-center font-light text-tertiary-dark leading-relaxed"
+          >
+            We also offer other services such as power washing, sanding,
+            caulking, wallpaper removal, and minor drywall repair. Don't see a
+            specific service listed here? Just ask!
+          </p>
+        </div>
+      </FadeIn>
+    </div>
+  </div>
+
+  <div
+    class="inline-block w-full bg-black/70 bg-blend-darken bg-cover bg-center bg-no-repeat mb-8"
+    style={`background-image: url('${contactUsBgImage.src}');`}
+  >
+    <div class="flex-col md:px-8 px-4 md:py-20 py-10">
+      <FadeIn client:load>
+        <div class="flex justify-center">
+          <h2
+            class="lg:text-5xl md:text-4xl text-3xl font-semibold text-white text-center items-center uppercase"
+          >
+            Let's Get In Touch
+          </h2>
+        </div>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <p
+          class="text-center max-w-xl md:text-base text-sm text-light text-white mx-auto px-8 my-7"
+        >
+          Need our professional services for your home or business? Contact us
+          today for a free estimate of your next project!
+        </p>
+      </FadeIn>
+
+      <FadeIn client:load>
+        <div class="flex">
+          <div class="mx-auto my-2">
+            <a
+              href="/contact-us"
+              class="px-4 py-2 text-lg text-secondary font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-400 transition duration-200 uppercase"
+              >Free Estimate</a
+            >
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+  </div>
+
+  <FadeIn client:load>
+    <Testimonials />
+  </FadeIn>
+</Layout>

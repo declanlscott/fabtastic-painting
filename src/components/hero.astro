@@ -1,0 +1,64 @@
+---
+import { Icon } from "astro-icon/components";
+import { getImage } from "astro:assets";
+
+import hero from "../assets/hero.jpg";
+import { FadeIn } from "./fade-in";
+
+const backgroundImage = await getImage({ src: hero, format: "webp" });
+---
+
+<div
+  class="min-h-screen bg-center bg-no-repeat bg-cover bg-blend-darken bg-black/50"
+  style={`background-image: url(${backgroundImage.src})`}
+>
+  <div class="flex-col md:px-8 px-4 md:py-20 py-10">
+    <FadeIn client:load>
+      <h1
+        class="flex justify-center text-center lg:text-6xl md:text-5xl text-4xl font-bold text-white tracking-wide uppercase"
+      >
+        Residential & Commercial
+      </h1>
+    </FadeIn>
+
+    <FadeIn client:load>
+      <div>
+        <div class="w-48 mx-auto flex">
+          <div class="w-full relative border-b border-primary"></div>
+
+          <Icon
+            name="fa6-solid:paint-roller"
+            class="size-8 relative top-4 text-primary mx-2"
+          />
+
+          <div class="w-full relative border-b border-primary"></div>
+        </div>
+
+        <div class="w-48 h-8 mx-auto"></div>
+      </div>
+    </FadeIn>
+
+    <FadeIn client:load>
+      <p
+        class="text-center lg:max-w-4xl md:text-lg text-base text-white mx-auto"
+      >
+        Fabtastic Painting provides high-quality interior and exterior painting
+        services and more for commercial and residential customers alike. We go
+        above and beyond to make your next project look Fabtastic. No matter the
+        size of the job, big or small, we will paint it all.
+      </p>
+    </FadeIn>
+
+    <FadeIn client:load>
+      <div class="flex">
+        <div class="mx-auto mt-10 md:mt-20 mb-4">
+          <a
+            href="/contact-us"
+            class="px-4 py-2 text-lg font-bold text-secondary bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200 uppercase"
+            >Request a quote</a
+          >
+        </div>
+      </div>
+    </FadeIn>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+---
+import { Picture } from "astro:assets";
+
+import commercial from "../assets/gallery/featured/commercial.jpg";
+import deck from "../assets/gallery/featured/deck.jpg";
+import greenWall from "../assets/gallery/featured/green-wall.jpg";
+import piano from "../assets/gallery/featured/piano.jpg";
+import restaurant from "../assets/gallery/featured/restaurant.jpg";
+import { GalleryCarousel } from "./gallery-carousel";
+---
+
+<div class="md:flex justify-center my-8 md:my-16 mx-8">
+  <div class="flex items-center justify-center">
+    <div class="flex-col text-secondary md:mr-16">
+      <h2
+        class="flex justify-center items-center font-semibold text-4xl sm:text-5xl mb-7 uppercase"
+      >
+        Work & Projects
+      </h2>
+
+      <p class="font-light text-base max-w-lg mb-10">
+        Providing Fabtastic service to the Cedar Rapids &amp; Iowa City Corridor
+        in Eastern Iowa since 2018. Follow us on <a
+          class="text-tertiary hover:text-tertiary-dark transition duration-200 underline"
+          href="https://www.facebook.com/FabtasticPainting/"
+          target="_blank">Facebook</a
+        > & <a
+          class="text-tertiary hover:text-tertiary-dark transition duration-200 underline"
+          href="https://www.instagram.com/fabtastic_paintingcr/"
+          target="_blank">Instagram</a
+        > to see more!
+      </p>
+
+      <div class="flex mt-4">
+        <div class="mx-auto">
+          <a
+            href="/gallery"
+            class="mx-auto px-4 py-2 text-lg font-bold bg-primary border border-tertiary rounded-full hover:bg-primary-light transition duration-200 uppercase"
+          >
+            See More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-center mt-10 md:mt-0">
+    <GalleryCarousel client:visible>
+      <Picture
+        slot="one"
+        src={piano}
+        alt="featured project one"
+        class="rounded-3xl aspect-square object-cover"
+      />
+
+      <Picture
+        slot="two"
+        src={restaurant}
+        alt="featured project two"
+        class="rounded-3xl aspect-square object-cover"
+      />
+
+      <Picture
+        slot="three"
+        src={greenWall}
+        alt="featured project three"
+        class="rounded-3xl aspect-square object-cover"
+      />
+
+      <Picture
+        slot="four"
+        src={commercial}
+        alt="featured project four"
+        class="rounded-3xl aspect-square object-cover"
+      />
+
+      <Picture
+        slot="five"
+        src={deck}
+        alt="featured project five"
+        class="rounded-3xl aspect-square object-cover"
+      />
+    </GalleryCarousel>
+  </div>
+</div>
