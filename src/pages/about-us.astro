@@ -1,0 +1,60 @@
+---
+import { Picture } from "astro:assets";
+
+import aboutUsGrid from "../assets/about-us-grid.jpg";
+import Banner from "../components/banner.astro";
+import { FadeIn } from "../components/fade-in";
+import Services from "../components/services.astro";
+import Testimonials from "../components/testimonials.astro";
+import Layout from "../layouts/layout.astro";
+---
+
+<Layout title="About Us">
+  <Banner pageTitle="About Us" />
+
+  <FadeIn client:load>
+    <div class="md:flex justify-center my-8 md:mt-24 md:mb-16 mx-8">
+      <div class="flex justify-center items-center">
+        <div class="flex-col text-secondary md:mr-16">
+          <h3 class="flex font-medium tracking-widest mb-2 uppercase">
+            Established 2018
+          </h3>
+
+          <h2 class="flex font-semibold text-4xl sm:text-5xl mb-7">
+            Who We Are
+          </h2>
+
+          <p class="flex text-base leading-relaxed max-w-lg pb-5">
+            Fabtastic Painting was founded in 2018 with the goal of being a
+            high-quality and affordable painting company serving the Corridor &
+            Eastern Iowa. With over 35 years combined experience in the
+            construction industry, we decided to focus and specialize in the one
+            area we both enjoy and take pride in...painting!
+          </p>
+
+          <p class="flex text-base leading-relaxed max-w-lg">
+            After running a successful small handyman/remodeling business we
+            decided we wanted a change, so we both went back to college, Andrea
+            graduating with a degree in Graphic Arts and Korrey with an
+            Architectural Design degree. After spending a few years in the
+            corporate world, it was decided that we were happier doing our own
+            thing, so we went back to what we truly loved--painting. And we
+            haven't turned back.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center mt-10 md:mt-0">
+        <Picture src={aboutUsGrid} alt="About Us" formats={["avif", "webp"]} />
+      </div>
+    </div>
+  </FadeIn>
+
+  <FadeIn client:load>
+    <Services />
+  </FadeIn>
+
+  <FadeIn client:load>
+    <Testimonials />
+  </FadeIn>
+</Layout>

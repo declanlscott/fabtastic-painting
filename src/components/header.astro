@@ -1,0 +1,22 @@
+---
+import { Picture } from "astro:assets";
+
+import logo from "../assets/fp-logo.jpg";
+import ContactBar from "./contact-bar.astro";
+import { MainNav } from "./main-nav";
+---
+
+<ContactBar />
+
+<MainNav client:load currentPath={Astro.url.pathname}>
+  <Picture
+    slot="logo"
+    src={logo}
+    alt="Fabtastic Painting"
+    class="inline-block align-top"
+    loading="eager"
+    formats={["avif", "webp"]}
+    width={195}
+    height={125}
+  />
+</MainNav>

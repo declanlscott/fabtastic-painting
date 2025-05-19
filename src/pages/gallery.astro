@@ -1,0 +1,70 @@
+---
+import { Picture } from "astro:assets";
+
+import Banner from "../components/banner.astro";
+import { FadeIn } from "../components/fade-in";
+import Layout from "../layouts/layout.astro";
+
+import type { ImageMetadata } from "astro";
+
+const galleryMetadata = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/gallery/*.jpg",
+);
+---
+
+<Layout title="Gallery">
+  <Banner pageTitle="Gallery" />
+
+  <FadeIn client:load>
+    <div class="lg:flex justify-center mt-8 md:mt-24 mx-8 lg:mr-32">
+      <div class="flex justify-center items-center">
+        <div class="flex-col text-secondary lg:mr-16">
+          <h3
+            class="flex sm:justify-center lg:justify-end lg:text-right font-medium tracking-widest mb-2 uppercase"
+          >
+            Browse Our Latest
+          </h3>
+
+          <h2
+            class="flex justify-center lg:justify-end lg:text-right items-center font-semibold text-4xl sm:text-5xl mb-7 uppercase"
+          >
+            Work & Projects
+          </h2>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <p class="font-light text-base max-w-sm lg:max-w-md">
+          Providing Fabtastic service to the Cedar Rapids & Iowa City Corridor
+          in Eastern Iowa since 2018. Follow us on <a
+            class="text-tertiary hover:text-tertiary-dark transition duration-200 underline"
+            href="https://www.facebook.com/FabtasticPainting/"
+            target="_blank">Facebook</a
+          > & <a
+            class="text-tertiary hover:text-tertiary-dark transition duration-200 underline"
+            href="https://www.instagram.com/fabtastic_paintingcr/"
+            target="_blank">Instagram</a
+          > to see more!
+        </p>
+      </div>
+    </div>
+  </FadeIn>
+
+  <div class="max-w-2xl lg:max-w-5xl mx-auto px-8 my-8 md:my-16">
+    <div class="masonry sm:masonry-sm lg:masonry-lg">
+      {
+        Object.values(galleryMetadata).map((image) => (
+          <FadeIn client:load>
+            <div class="break-inside mb-8 max-w-xs mx-auto overflow-hidden">
+              <Picture
+                src={image()}
+                alt="Gallery Photos"
+                class="transform hover:scale-125 transition duration-700 ease-in-out"
+              />
+            </div>
+          </FadeIn>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

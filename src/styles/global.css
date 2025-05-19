@@ -1,37 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-#swiper-color .swiper-button-next {
-    color: #E6C279
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-#swiper-color .swiper-button-prev {
-    color: #E6C279
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-#swiper-color .swiper-pagination-bullet-active {
-    background-color: #E6C279
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-@layer utilities {
-  @variants responsive {
-    .masonry {
-      column-count: 1;
-      column-gap: 2rem;
-    }
-    .masonry-sm {
-      column-count: 2;
-      column-gap: 2rem;
-    }
-    .masonry-lg {
-      column-count: 3;
-      column-gap: 2rem;
-    }
-    .break-inside {
-      break-inside: avoid;
-    }
-  }
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary: #e6c279;
+  --color-primary-light: #e9cb8d;
+
+  --color-secondary: #403520;
+
+  --color-tertiary: #8a7345;
+  --color-tertiary-dark: #75613a;
+
+  --font-sans: Poppins, sans-serif;
+}
+
+@utility masonry {
+  column-count: 1;
+  column-gap: 2rem;
+}
+
+@utility masonry-sm {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+@utility masonry-lg {
+  column-count: 3;
+  column-gap: 2rem;
+}
+
+@utility break-inside {
+  break-inside: avoid;
 }

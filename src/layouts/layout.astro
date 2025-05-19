@@ -1,0 +1,40 @@
+---
+import "../styles/global.css"
+
+import { ClientRouter } from "astro:transitions";
+
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Fabtastic Painting provides high-quality interior and exterior painting services and more for commercial and residential customers alike. We go above and beyond to make your next project look Fabtastic. No matter the size of the job, big or small, we will paint it all."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      {title ? `${title} | Fabtastic Painting` : "Fabtastic Painting"}
+    </title>
+    <ClientRouter />
+  </head>
+
+  <body>
+    <Header />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>

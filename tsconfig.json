@@ -1,17 +1,14 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "es6",
-      "jsx": "preserve",
-      "lib": ["dom", "es2015", "es2017"],
-      "strict": true,
-      "noEmit": true,
-      "isolatedModules": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "removeComments": false
-    },
-    "include": ["./src/**/*", "./types"]
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
+}

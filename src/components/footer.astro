@@ -1,0 +1,88 @@
+---
+import { Icon } from "astro-icon/components";
+import { Copyright } from "./copyright";
+---
+
+<footer class="bg-black">
+  <div class="max-w-7xl mx-auto md:px-8 px-4">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white pt-8 pb-14"
+    >
+      <div class="flex-col">
+        <h4 class="flex justify-center text-lg font-bold mb-4 uppercase">
+          About Us
+        </h4>
+
+        <p class="text-sm ml-2">
+          Fabtastic Painting is a woman-owned company. Focused on residential
+          and commercial painting. Specializing in interior & exterior painting.
+          Serving the Cedar Rapids & Iowa City corridor. State registered & insured.
+        </p>
+      </div>
+
+      <div class="flex-col">
+        <h4 class="flex justify-center text-lg font-bold mb-4">CONTACT US</h4>
+        <div class="flex items-center text-sm pl-10 pb-3">
+          <Icon name="heroicons:map-pin-16-solid" class="mr-2" />
+          Cedar Rapids, IA 52404-2803
+        </div>
+
+        <div class="flex items-center text-sm pl-10 pb-3">
+          <Icon name="fa6-solid:phone" class="mr-2" />
+
+          <a
+            href="tel:+1319-202-4769"
+            class="text-white text-sm font-light hover:text-primary transition duration-200"
+            >(319) 202-4769</a
+          >
+        </div>
+
+        <div class="flex items-center text-sm pl-10 pb-3">
+          <Icon name="fa6-regular:envelope" class="mr-2" />
+
+          <a
+            href="mailto:fabtasticpainting@gmail.com"
+            class="text-white text-sm font-light hover:text-primary transition duration-200"
+            >fabtasticpainting@gmail.com</a
+          >
+        </div>
+
+        <div class="flex items-center text-sm pl-10">
+          <Icon name="fa6-regular:clock" class="mr-2" />
+          Mon - Fri 8AM - 7PM / Sat - Sun 10AM - 4PM
+        </div>
+      </div>
+
+      <div class="flex-col">
+        <h4 class="flex justify-center text-lg font-bold mb-4 uppercase">
+          Like & Follow Us
+        </h4>
+
+        <div class="flex justify-center space-x-11">
+          <a href="https://www.facebook.com/FabtasticPainting/" target="_blank">
+            <Icon
+              name="fa6-brands:facebook-f"
+              class="size-12 hover:text-primary transition duration-200 px-2"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/fabtastic_paintingcr/"
+            target="_blank"
+          >
+            <Icon
+              name="fa6-brands:instagram"
+              class="size-14 hover:text-primary transition duration-200 px-2"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="flex justify-center items-center text-white font-light text-sm text-center py-5 md:px-8 px-4"
+  >
+    <Copyright client:visible />
+  </div>
+</footer>

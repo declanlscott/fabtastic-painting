@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+import { TestimonialsCarousel } from "./testimonials-carousel";
+
+const testimonials = await getCollection("testimonials");
+---
+
+<div class="my-8 md:my-16 mx-8">
+  <div class="mx-auto max-w-7xl text-secondary">
+    <div class="flex justify-between">
+      <div class="flex-col">
+        <h3 class="flex font-medium tracking-widest mb-2 uppercase">
+          What People Are Saying
+        </h3>
+        <h2 class="flex font-semibold text-4xl sm:text-5xl mb-7 uppercase">
+          Testimonials
+        </h2>
+        <p class="flex font-light text-base max-w-lg mb-10">
+          Don't believe us? Check out our customer write-ups and learn how we
+          went above and beyond to make their spaces Fabtastic.
+        </p>
+      </div>
+      <div class="hidden md:flex text-primary text-opacity-50 gap-16">
+        <Icon name="fa6-solid:quote-left" class="size-24 mt-0 my-auto" />
+
+        <Icon name="fa6-solid:quote-right" class="size-24 mb-0 my-auto" />
+      </div>
+    </div>
+
+    <TestimonialsCarousel client:visible {testimonials} />
+  </div>
+</div>
